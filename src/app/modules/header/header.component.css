@@ -1,0 +1,20 @@
+.spaceTop {
+    background-color: #F5F5F5;
+    height:20px;
+}
+
+.header_main {
+    background-color: #F5F5F5;
+    color: #696969;
+}
+
+.homeIconSizeAndColour {
+    color: #C0C0C0;
+    font-size: 30px;
+    text-decoration:none;
+}
+
+
+.textAlignCenter {
+    text-align: center;
+}

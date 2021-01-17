@@ -1,0 +1,59 @@
+
+html, body { 
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    color: black;
+}
+
+
+.applyGoogleFont {
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main_card__wrapper {
+    background-color: #F5F5F5;
+}
+
+.titleFontSize {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size:30px;
+}
+
+.main_card {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 70%;
+}
+
+
+
+
+
+/* space above and under */
+.spaceAboveGridList {
+    height: 50px;
+}
+
+.spaceUnderGridList {
+    height: 70px;
+}

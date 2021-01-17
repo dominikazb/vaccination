@@ -1,0 +1,111 @@
+
+/* card heights */
+.fillInQuestionnaireCardHeight {
+    height: 80%;
+}
+
+.diseasesCardHeight {
+    height: 80%;
+}
+
+.orderEbookHeight {
+    height: 60%;
+}
+
+
+
+/* utils */
+mat-card {
+    border-radius: 5px;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+
+/* card background colors */
+.fillInQuestBckgColor {
+    background-image: url("./../../../assets/graphics/fill-in-query.jpg");
+    background-size: 100% auto;
+}
+
+.white {
+    color: white;
+}
+
+.fluCardBckgColor {
+    background-image: url("./../../../assets/graphics/flu.jpg");
+    background-size: 100% auto;
+}
+
+.pneumoCardBckgColor {
+    background-image: url("./../../../assets/graphics/pneumococcus.jpg");
+    background-size: 100% auto;
+}
+
+.pregnantCardBckgColor {
+    background-image: url("./../../../assets/graphics/pregnancy.jpg");
+    background-size: 100% auto;
+}
+
+.orderEbookCardBckgColor {
+    background-image: url("./../../../assets/graphics/download-ebook.jpg");
+    background-size: 100% auto;
+}
+
+
+
+/* card icon sizes */
+.bottomCardIconSize {
+    font-size: 50px;
+}
+
+.fillInQuestionnaireIconSize {
+    font-size: 100px;
+}
+
+
+
+/* card text sizes */
+.fillInQuestTextSize {
+    background: black;
+    color: white;
+    float: left;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 18px;
+    padding-right: 18px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.orderEbookTextSize {
+    background: black;
+    color: white;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.bottomCardsTextSize {
+    background: black;
+    color: white;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    border-radius: 10px;
+}

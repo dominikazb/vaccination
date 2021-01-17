@@ -1,0 +1,41 @@
+  <div class="main_card__wrapper">
+  <div class="spaceAboveGridList"></div>
+  <mat-grid-list cols = "6" rowHeight="200px">
+      <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
+
+      <mat-grid-tile [colspan] = "4" [rowspan] = "2" fxLayoutAlign="center center">
+
+          <mat-card class="main_card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title class="applyGoogleFont titleFontSize">{{question1}}</mat-card-title>
+              </mat-card-header>
+              
+            <mat-card-content fxLayoutAlign="center">
+
+                  <div class="button_answer__wrapper">
+                    <input type="button" class="button_answer__layout" value="{{answer1}}" (click)="getAnswer1()">
+                    <input type="button" class="button_answer__layout" value="{{answer2}}" (click)="getAnswer2()">
+                  </div>
+
+              </mat-card-content>
+              <mat-card-actions>
+                      <div fxFlex></div><button mat-raised-button 
+                                                color="accent"
+                                                [disabled]="disabledNextBtn"
+                                                routerLink="/question2">{{nextStepButtonText}}</button>
+              </mat-card-actions>
+            </mat-card>
+
+
+      
+      </mat-grid-tile>
+
+      
+      <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
+
+  </mat-grid-list>
+
+  <div class="spaceUnderGridList"></div>
+  </div>
+

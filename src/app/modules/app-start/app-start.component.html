@@ -1,0 +1,50 @@
+<div class="spaceAboveGridList"></div>
+
+<mat-grid-list cols = "6" rowHeight="200px">
+    <mat-grid-tile [colspan] = "1"[rowspan] = "3"></mat-grid-tile>
+
+    <mat-grid-tile [colspan] = "3" [rowspan] = "2">
+        <mat-card appElevation class="fillInQuestionnaireCardHeight fillInQuestBckgColor" fxFlex="94" fxLayoutAlign="center center" routerLink="questionnaire">
+            <div class="textAlignCenter">
+                <p class="fillInQuestTextSize applyGoogleFont">WYPEŁNIJ ANKIETĘ</p>
+            </div>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan] = "1" [rowspan] = "3">
+        <mat-card appElevation class="orderEbookHeight orderEbookCardBckgColor" fxFlex="83" fxLayoutAlign="center center" (click)="navigateToOrderEbookPost()">
+            <div class="textAlignCenter">
+                <p class="orderEbookTextSize applyGoogleFont">ZAMÓW EBOOKA</p>
+            </div>       
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan] = "1" [rowspan] = "3"></mat-grid-tile>
+    
+    <mat-grid-tile [colspan] = "1" [rowspan] = "1">
+        <mat-card appElevation class="diseasesCardHeight fluCardBckgColor" fxFlex="80" fxLayoutAlign="center center">
+            <div class="textAlignCenter">
+                <p class="bottomCardsTextSize applyGoogleFont">GRYPA</p>
+            </div>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan] = "1" [rowspan] = "1"> 
+        <mat-card appElevation class="diseasesCardHeight pneumoCardBckgColor" fxFlex="80" fxLayoutAlign="center center">
+            <div class="textAlignCenter">
+                <p class="bottomCardsTextSize applyGoogleFont">PNEUMOKOKI</p>
+            </div>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan] = "1" [rowspan] = "1"> 
+        <mat-card appElevation class="diseasesCardHeight pregnantCardBckgColor" fxFlex="80" fxLayoutAlign="center center">
+            <div class="textAlignCenter">
+                <p class="bottomCardsTextSize applyGoogleFont">CIĄŻA</p>
+            </div>
+        </mat-card>
+    </mat-grid-tile>
+
+</mat-grid-list>
+
+<div class="spaceUnderGridList"></div>

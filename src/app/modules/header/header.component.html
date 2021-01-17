@@ -1,0 +1,36 @@
+<div class="spaceTop"></div>
+
+<div class="header_main" *ngIf="deviceMd || deviceLg">
+    <mat-grid-list cols = "6" rowHeight = "60px">
+        <mat-grid-tile [colspan] = "1"[rowspan] = "2">
+            <a href="/"><i class="fas fa-home homeIconSizeAndColour"></i></a>  
+        </mat-grid-tile>
+        <mat-grid-tile class="applyGoogleFont" [ngStyle]="{'font-size': '50px'}" [colspan] = "4"[rowspan] = "1">
+            {{title}}
+        </mat-grid-tile>
+        <mat-grid-tile [colspan] = "1"[rowspan] = "2">
+            
+        </mat-grid-tile>
+        <mat-grid-tile class="applyGoogleFont" [ngStyle]="{'font-size': '12px'}" [colspan] = "4"[rowspan] = "1">
+            {{subtitle | uppercase}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+
+<!-- <div *ngIf="deviceXs">
+    <mat-grid-list cols = "1">
+        <mat-grid-tile class="applyGoogleFont" [ngStyle]="{'font-size': '50px'}" [colspan] = "1"[rowspan] = "1">
+            Lekarz Rodziny Blog
+        </mat-grid-tile>
+        <mat-grid-tile class="applyGoogleFont" [ngStyle]="{'font-size': '12px', 'color': '#bfc8c9'}" [colspan] = "1"[rowspan] = "1">
+            {{subtitle | uppercase}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</div> -->
+
+
+
+
+
+
