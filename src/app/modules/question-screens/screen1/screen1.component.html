@@ -1,5 +1,5 @@
-  <div class="main_card__wrapper">
-    <form [formGroup]="questionnaireForm" (ngSubmit)="onSubmit()">
+<div class="main_card__wrapper">
+  <form [formGroup]="questionnaireForm" (ngSubmit)="onSubmit()">
     <mat-grid-list cols = "6" rowHeight="200px">
       <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
       <mat-grid-tile [colspan] = "4" [rowspan] = "2" fxLayoutAlign="center center">
@@ -14,7 +14,6 @@
                 <label>
                   <input
                     type="radio"
-                    class="button_answer__layout"
                     formControlName="gender"
                     [value]="gender">{{ gender }}
                 </label>
@@ -33,5 +32,5 @@
       <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
     </mat-grid-list>
     <div class="spaceUnderGridList"></div>
-    </form>
-  </div>
+  </form>
+</div>

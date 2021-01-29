@@ -1,8 +1,8 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { MatSelectChange } from '@angular/material/select';
 import { ProcessVariablesService } from 'src/app/shared/services/process-variables.service';
 import {Router} from '@angular/router';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-screen2',
@@ -13,21 +13,26 @@ export class Screen2Component implements OnInit {
 
   public years: number[] = [];
   public question2 = '';
-  private selectedYear: string;
-  public selectedCountry = 2020;
+  public questionnaireForm: FormGroup;
 
-  constructor(private datePipe: DatePipe,
-              private processVariablesService: ProcessVariablesService,
+  constructor(private processVariablesService: ProcessVariablesService,
+              private datePipe: DatePipe,
               private router: Router) { }
 
   ngOnInit(): void {
-    this.generateYears();
     this.question2 = this.processVariablesService.questions[1].question2;
+    this.generateYears();
+    this.buildForm();
   }
 
+  private buildForm(): void {
+    this.questionnaireForm = new FormGroup({
+      yearOfBirth: new FormControl(null, Validators.required)
+    });
+  }
 
   private generateYears(): void {
-    const currentYear: number = parseInt(this.datePipe.transform(new Date(), 'yyyy'), 2);
+    const currentYear: number = parseInt(this.datePipe.transform(new Date(), 'yyyy'));
     let year: number = currentYear;
     for (let i = currentYear; i >= 1930; i--) {
       this.years.push(year);
@@ -35,14 +40,8 @@ export class Screen2Component implements OnInit {
     }
   }
 
-  selectedValue(event: MatSelectChange): void {
-    console.log(event.value);
-    this.selectedYear = event.value;
-  }
-
-  submitForm(): void {
-    this.processVariablesService.answers.question2 = this.selectedYear;
+  onSubmit(): void {
+    this.processVariablesService.answers.question2 = this.questionnaireForm.value.yearOfBirth;
     this.router.navigate(['/question3']);
   }
-
 }
