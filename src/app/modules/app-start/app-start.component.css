@@ -13,7 +13,6 @@
 }
 
 
-
 /* utils */
 mat-card {
     border-radius: 5px;
@@ -22,7 +21,6 @@ mat-card {
 .textAlignCenter {
     text-align: center;
 }
-
 
 /* card background colors */
 .fillInQuestBckgColor {

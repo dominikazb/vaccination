@@ -1,5 +1,5 @@
 
-html, body { 
+html, body {
     height: 100%;
     font-family: 'Playfair Display', serif;
 }
@@ -9,7 +9,6 @@ body {
     margin: 0;
     color: black;
 }
-
 
 .applyGoogleFont {
     font-family: 'Playfair Display', serif;
@@ -28,32 +27,45 @@ body {
 
 
 .main_card__wrapper {
-    background-color: #F5F5F5;
+  background-color: #F5F5F5;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.titleFontSize {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    font-size:30px;
+.card_title.mat-card-title {
+  font-family: 'Playfair Display', serif;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 25px;
 }
 
-.main_card {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    width: 70%;
+.main_question__card.mat-card {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  width: 70%;
+}
+
+.button_answer__wrapper {
+  width: 90%;
+}
+
+.button_answer__layout {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.mat-raised-button {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
 }
 
 
 
 
-
-/* space above and under */
-.spaceAboveGridList {
-    height: 50px;
-}
-
-.spaceUnderGridList {
-    height: 70px;
-}

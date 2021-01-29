@@ -1,8 +1,8 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnChanges, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
 import { ProcessVariablesService } from 'src/app/shared/services/process-variables.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-screen2',
@@ -12,37 +12,37 @@ import { ProcessVariablesService } from 'src/app/shared/services/process-variabl
 export class Screen2Component implements OnInit {
 
   public years: number[] = [];
-  public question2: string = '';
-  private selectedYear: string; 
-
+  public question2 = '';
+  private selectedYear: string;
+  public selectedCountry = 2020;
 
   constructor(private datePipe: DatePipe,
-              private processVariablesService: ProcessVariablesService) { }
+              private processVariablesService: ProcessVariablesService,
+              private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.generateYears();
     this.question2 = this.processVariablesService.questions[1].question2;
   }
 
- 
-  private generateYears() {
-    const currentYear: number = parseInt(this.datePipe.transform(new Date(), 'yyyy'));
+
+  private generateYears(): void {
+    const currentYear: number = parseInt(this.datePipe.transform(new Date(), 'yyyy'), 2);
     let year: number = currentYear;
-    for (var i = currentYear; i >= 1930; i--) {
+    for (let i = currentYear; i >= 1930; i--) {
       this.years.push(year);
       year--;
-    }    
+    }
   }
 
-  selectedCountry: number = 2020;
-
-  selectedValue(event: MatSelectChange) {
+  selectedValue(event: MatSelectChange): void {
     console.log(event.value);
     this.selectedYear = event.value;
   }
 
-  submitForm() {
+  submitForm(): void {
     this.processVariablesService.answers.question2 = this.selectedYear;
+    this.router.navigate(['/question3']);
   }
 
 }

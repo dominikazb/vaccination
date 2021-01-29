@@ -1,41 +1,37 @@
   <div class="main_card__wrapper">
-  <div class="spaceAboveGridList"></div>
-  <mat-grid-list cols = "6" rowHeight="200px">
+    <form [formGroup]="questionnaireForm" (ngSubmit)="onSubmit()">
+    <mat-grid-list cols = "6" rowHeight="200px">
       <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
-
       <mat-grid-tile [colspan] = "4" [rowspan] = "2" fxLayoutAlign="center center">
+        <mat-card class="main_question__card">
+          <mat-card-header fxLayoutAlign="center">
+            <mat-card-title class="card_title">{{question1}}</mat-card-title>
+          </mat-card-header>
 
-          <mat-card class="main_card">
-              <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title class="applyGoogleFont titleFontSize">{{question1}}</mat-card-title>
-              </mat-card-header>
-              
-            <mat-card-content fxLayoutAlign="center">
+          <mat-card-content fxLayoutAlign="center">
+            <div class="button_answer__wrapper">
+              <div class="radio" *ngFor="let gender of genders">
+                <label>
+                  <input
+                    type="radio"
+                    class="button_answer__layout"
+                    formControlName="gender"
+                    [value]="gender">{{ gender }}
+                </label>
+              </div>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
 
-                  <div class="button_answer__wrapper">
-                    <input type="button" class="button_answer__layout" value="{{answer1}}" (click)="getAnswer1()">
-                    <input type="button" class="button_answer__layout" value="{{answer2}}" (click)="getAnswer2()">
-                  </div>
-
-              </mat-card-content>
-              <mat-card-actions>
-                      <div fxFlex></div><button mat-raised-button 
-                                                color="accent"
-                                                [disabled]="disabledNextBtn"
-                                                routerLink="/question2">{{nextStepButtonText}}</button>
-              </mat-card-actions>
-            </mat-card>
-
-
-      
+            <div fxFlex></div><button mat-raised-button
+                                      color="warn"
+                                      type="submit"
+                                      [disabled]="!questionnaireForm.valid">{{nextStepButtonText}}</button>
+          </mat-card-actions>
+        </mat-card>
       </mat-grid-tile>
-
-      
       <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
-
-  </mat-grid-list>
-
-  <div class="spaceUnderGridList"></div>
+    </mat-grid-list>
+    <div class="spaceUnderGridList"></div>
+    </form>
   </div>
-

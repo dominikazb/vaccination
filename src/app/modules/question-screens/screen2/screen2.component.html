@@ -3,7 +3,7 @@
         <mat-grid-list cols = "6" rowHeight="200px">
 
             <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
-        
+
             <mat-grid-tile [colspan] = "4" [rowspan] = "2" fxLayoutAlign="center center">
                 <mat-card class="main_card">
                     <mat-card-header>
@@ -12,8 +12,8 @@
                     </mat-card-header>
                     <mat-card-content fxLayoutAlign="center">
                         <mat-form-field class="fullWidthFormField" appearance="fill">
-                            <mat-select placeholder="Wybierz rok urodzenia" 
-                            (selectionChange)="selectedValue($event)" 
+                            <mat-select placeholder="Wybierz rok urodzenia"
+                            (selectionChange)="selectedValue($event)"
                             [(value)]="selectedCountry">
 
                               <mat-option *ngFor="let yearOfBirth of years" [value]="yearOfBirth" >
@@ -26,8 +26,7 @@
                             <div fxFlex></div>
                             <button mat-raised-button color="accent"
                                     type="submit"
-                                    (click)="submitForm()"
-                                    routerLink="/question3">Przejdź dalej</button>
+                                    (click)="submitForm()">Przejdź dalej</button>
                     </mat-card-actions>
                 </mat-card>
             </mat-grid-tile>
