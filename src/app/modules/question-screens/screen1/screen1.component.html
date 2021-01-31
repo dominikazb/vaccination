@@ -10,18 +10,27 @@
 
           <mat-card-content fxLayoutAlign="center">
             <div class="button_answer__wrapper">
-              <div class="radio" *ngFor="let gender of genders">
-                <label>
-                  <input
-                    type="radio"
-                    formControlName="gender"
-                    [value]="gender">{{ gender }}
-                </label>
-              </div>
+
+              <mat-radio-group class="form-control" formControlName="gender">
+                <ul class="items answers-list">
+                  <li class="answer" fxLayoutAlign="center"
+                      [ngStyle]="{'background-color': currentIndex === i ? '#F5F5F5':'transparent'}"
+                      *ngFor="let gender of genders, let i = index">
+                    <div (click)="passIndexValue(i)">
+                      <mat-radio-button
+                        class="applyGoogleFont"
+                        [value]="gender">
+                        <p>{{gender}}</p>
+                      </mat-radio-button>
+                    </div>
+                  </li>
+                </ul>
+              </mat-radio-group>
+
             </div>
           </mat-card-content>
-          <mat-card-actions>
 
+          <mat-card-actions>
             <div fxFlex></div><button mat-raised-button
                                       color="warn"
                                       type="submit"

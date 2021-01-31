@@ -14,6 +14,7 @@ export class Screen2Component implements OnInit {
   public years: number[] = [];
   public question2 = '';
   public questionnaireForm: FormGroup;
+  public checked = true;
 
   constructor(private processVariablesService: ProcessVariablesService,
               private datePipe: DatePipe,
@@ -27,7 +28,7 @@ export class Screen2Component implements OnInit {
 
   private buildForm(): void {
     this.questionnaireForm = new FormGroup({
-      yearOfBirth: new FormControl(null, Validators.required)
+      yearOfBirth: new FormControl(this.processVariablesService.answers.question2, Validators.required)
     });
   }
 

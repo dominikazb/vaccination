@@ -2,10 +2,8 @@
     {
         "question1": "Podaj swoją płeć:",
         "answers": [
-            {
-                "answer1":"Kobieta",
-                "answer2":"Mężczyzna"
-            }
+            { "answer":"Kobieta" },
+            { "answer":"Mężczyzna" }
         ]
     },
     {
