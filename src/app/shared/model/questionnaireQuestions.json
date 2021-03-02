@@ -26,37 +26,29 @@
     {
         "question5": "Czy jesteś w ciąży?",
         "answers": [
-            {
-                "answer1":"Tak",
-                "answer2":"Nie"
-            }
+            { "answer":"Tak" },
+            { "answer":"Nie" }
         ]
     },
     {
         "question6": "Czy planujesz zajść w ciążę?",
         "answers": [
-            {
-                "answer1":"Tak",
-                "answer2":"Nie"
-            }
+            { "answer":"Tak" },
+            { "answer":"Nie" }
         ]
     },
     {
-        "question7": "Czy jesteś w trakcie karmie piersią?",
+        "question7": "Czy jesteś w trakcie karmienia piersią?",
         "answers": [
-            {
-                "answer1":"Tak",
-                "answer2":"Nie"
-            }
+            { "answer":"Tak" },
+            { "answer":"Nie" }
         ]
     },
     {
         "question8": "Czy masz kontakt z małymi dziećmi?",
         "answers": [
-            {
-                "answer1":"Tak",
-                "answer2":"Nie"
-            }
+            { "answer":"Tak" },
+            { "answer":"Nie" }
         ]
     },
     {
