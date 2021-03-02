@@ -1,0 +1,16 @@
+
+.space_20px {
+  height: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-card {
+  height: 300px;
+}
+
+mat-card-content {
+  height: 50%;
+}

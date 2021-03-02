@@ -1,6 +1,6 @@
-import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { ProcessVariablesService } from 'src/app/shared/services/process-variables.service';
+import {DatePipe} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {ProcessVariablesService} from 'src/app/shared/services/process-variables.service';
 import {Router} from '@angular/router';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
@@ -33,7 +33,7 @@ export class Screen2Component implements OnInit {
   }
 
   private generateYears(): void {
-    const currentYear: number = parseInt(this.datePipe.transform(new Date(), 'yyyy'));
+    const currentYear: number = parseInt(this.datePipe.transform(new Date(), 'yyyy'), 10);
     let year: number = currentYear;
     for (let i = currentYear; i >= 1930; i--) {
       this.years.push(year);
@@ -44,5 +44,9 @@ export class Screen2Component implements OnInit {
   onSubmit(): void {
     this.processVariablesService.answers.question2 = this.questionnaireForm.value.yearOfBirth;
     this.router.navigate(['/question3']);
+  }
+
+  goBack(): void {
+    this.router.navigate(['/questionnaire']);
   }
 }

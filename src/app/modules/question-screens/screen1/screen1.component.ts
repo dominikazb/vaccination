@@ -1,5 +1,5 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import { ProcessVariablesService } from 'src/app/shared/services/process-variables.service';
+import {Component, OnInit} from '@angular/core';
+import {ProcessVariablesService} from 'src/app/shared/services/process-variables.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 
@@ -23,7 +23,7 @@ export class Screen1Component implements OnInit {
     this.question1 = this.processVariablesService.questions[0].question1;
     this.getPossibleAnswers();
     this.nextStepButtonText = this.processVariablesService.nextStepButtonText;
-    this.getIndexOfChosenValue();
+    this.getIndexOfChosenAnswer();
     this.buildForm();
   }
 
@@ -39,7 +39,7 @@ export class Screen1Component implements OnInit {
     );
   }
 
-  getIndexOfChosenValue(): void {
+  getIndexOfChosenAnswer(): void {
     this.genders.forEach(gender => {
       if (gender === this.processVariablesService.answers.question1) {
         this.currentIndex = this.genders.indexOf(gender);
@@ -52,7 +52,6 @@ export class Screen1Component implements OnInit {
   }
 
   public onSubmit(): void {
-    console.log(this.questionnaireForm.value.gender);
     this.processVariablesService.answers.question1 = this.questionnaireForm.value.gender;
     this.router.navigate(['/question2']);
   }

@@ -12,19 +12,15 @@
     {
         "question3": "Czy jesteś pracownikiem ochrony zdrowia?",
         "answers": [
-            {
-                "answer1":"Tak",
-                "answer2":"Nie"
-            }
+            { "answer":"Tak" },
+            { "answer":"Nie" }
         ]
     },
     {
         "question4": "Czy pracujesz na oddziale neonatologicznym lub pediatrycznym?",
         "answers": [
-            {
-                "answer1":"Tak",
-                "answer2":"Nie"
-            }
+            { "answer":"Tak" },
+            { "answer":"Nie" }
         ]
     },
     {

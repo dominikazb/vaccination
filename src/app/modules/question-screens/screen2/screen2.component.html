@@ -5,31 +5,30 @@
       <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
       <mat-grid-tile [colspan] = "4" [rowspan] = "2" fxLayoutAlign="center center">
         <mat-card class="main_question__card">
+
           <mat-card-header fxLayoutAlign="center">
-            <mat-card-title class="applyGoogleFont titleFontSize">{{question2}}</mat-card-title>
+            <mat-card-title class="card_title">{{question2}}</mat-card-title>
           </mat-card-header>
 
           <mat-card-content fxLayoutAlign="center">
-
-            <div class="button_answer__wrapper" fxLayoutAlign="center">
-
+            <div class="button_answer__wrapper">
+              <div class="space_20px"></div>
               <mat-form-field appearance="fill">
-                <mat-select placeholder="Wybierz rok urodzenia"
-                            formControlName="yearOfBirth">
+                <mat-select placeholder="Wybierz rok urodzenia" formControlName="yearOfBirth">
                   <mat-option *ngFor="let yearOfBirth of years" [value]="yearOfBirth">{{yearOfBirth}}</mat-option>
                 </mat-select>
               </mat-form-field>
-
             </div>
-
           </mat-card-content>
 
           <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="goBack()">Cofnij</button>
             <div fxFlex></div>
             <button mat-raised-button color="accent"
                     type="submit"
                     [disabled]="!questionnaireForm.valid">Przejdź dalej</button>
           </mat-card-actions>
+
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
