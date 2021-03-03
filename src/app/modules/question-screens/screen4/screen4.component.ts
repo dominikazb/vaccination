@@ -62,7 +62,11 @@ export class Screen4Component implements OnInit {
 
   public onSubmit(): void {
     this.processVariablesService.answers.question4 = this.questionnaireForm.value.yesNoAnswer;
-    this.router.navigate(['/question5']);
+    if (this.processVariablesService.answers.question1 === 'Kobieta') {
+      this.router.navigate(['/question5']);
+    } else {
+      this.router.navigate(['/question7']);
+    }
   }
 
   public goBack(): void {

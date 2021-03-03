@@ -62,7 +62,11 @@ export class Screen3Component implements OnInit {
 
   public onSubmit(): void {
     this.processVariablesService.answers.question3 = this.questionnaireForm.value.yesNoAnswer;
-    this.router.navigate(['/question4']);
+    if (this.processVariablesService.answers.question3 === 'Tak') {
+      this.router.navigate(['/question4']);
+    } else {
+      this.router.navigate(['/question5']);
+    }
   }
 
   public goBack(): void {

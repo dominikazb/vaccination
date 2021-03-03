@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ProcessVariablesService} from 'src/app/shared/services/process-variables.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
@@ -6,7 +6,8 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-screen1',
   templateUrl: './screen1.component.html',
-  styleUrls: ['./screen1.component.css']
+  styleUrls: ['./screen1.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class Screen1Component implements OnInit {
 
