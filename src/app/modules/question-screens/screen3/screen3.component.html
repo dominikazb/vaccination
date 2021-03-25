@@ -1,8 +1,8 @@
 <div class="main_card__wrapper">
   <form [formGroup]="questionnaireForm" (ngSubmit)="onSubmit()">
-    <mat-grid-list cols = "6" rowHeight="200px">
-      <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
-      <mat-grid-tile [colspan] = "4" [rowspan] = "2" fxLayoutAlign="center center">
+    <mat-grid-list cols="6" rowHeight="200px">
+      <mat-grid-tile [colspan]="1" [rowspan]="2"></mat-grid-tile>
+      <mat-grid-tile [colspan]="4" [rowspan]="2" fxLayoutAlign="center center">
 
         <mat-card class="main_question__card">
 
@@ -42,7 +42,7 @@
         </mat-card>
 
       </mat-grid-tile>
-      <mat-grid-tile [colspan] = "1"[rowspan] = "2"></mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="2"></mat-grid-tile>
     </mat-grid-list>
     <div class="spaceUnderGridList"></div>
   </form>
