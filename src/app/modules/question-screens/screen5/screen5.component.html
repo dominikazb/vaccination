@@ -11,23 +11,16 @@
           </mat-card-header>
 
           <mat-card-content fxLayoutAlign="center">
-            <div class="button_answer__wrapper">
-              <mat-radio-group class="form-control" formControlName="yesNoAnswer">
-                <ul class="items answers-list">
-                  <li class="answer" fxLayoutAlign="center"
-                      [ngStyle]="{'background-color': currentIndex === i ? '#F5F5F5':'transparent'}"
-                      *ngFor="let yesNoAnswer of answers, let i = index">
-                    <div (click)="passIndexValue(i)">
-                      <mat-radio-button
-                        class="applyGoogleFont"
-                        [value]="yesNoAnswer">
-                        <p>{{yesNoAnswer}}</p>
-                      </mat-radio-button>
-                    </div>
-                  </li>
-                </ul>
-              </mat-radio-group>
-            </div>
+            <mat-button-toggle-group style="width:50vw"
+                                     class="form-control" formControlName="yesNoAnswer"
+                                     *ngFor="let yesNoAnswer of answers, let i = index">
+              <div (click)="passIndexValue(i)">
+                <mat-button-toggle fxFlex="100" class="applyGoogleFont font_size_20"
+                                   [ngStyle]="{'background-color': currentIndex === i ? '#F5F5F5':'transparent'}"
+                                   [value]="yesNoAnswer">{{yesNoAnswer}}
+                </mat-button-toggle>
+              </div>
+            </mat-button-toggle-group>
           </mat-card-content>
 
           <mat-card-actions>
