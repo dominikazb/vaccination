@@ -5,7 +5,8 @@ import {Router} from '@angular/router';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-screen2',
+  // tslint:disable-next-line:component-selector
+  selector: 'screen2',
   templateUrl: './screen2.component.html',
   styleUrls: ['./screen2.component.css']
 })

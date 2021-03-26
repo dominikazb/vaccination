@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ProcessVariablesService} from '../../../shared/services/process-variables.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-screen6',
+  // tslint:disable-next-line:component-selector
+  selector: 'screen6',
   templateUrl: './screen6.component.html',
   styleUrls: ['./screen6.component.css']
 })

@@ -4,7 +4,8 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-screen1',
+  // tslint:disable-next-line:component-selector
+  selector: 'screen1',
   templateUrl: './screen1.component.html',
   styleUrls: ['./screen1.component.css'],
   encapsulation: ViewEncapsulation.None
@@ -56,5 +57,4 @@ export class Screen1Component implements OnInit {
     this.processVariablesService.answers.question1 = this.questionnaireForm.value.gender;
     this.router.navigate(['/question2']);
   }
-
 }

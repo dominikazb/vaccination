@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-screen7',
+  // tslint:disable-next-line:component-selector
+  selector: 'screen7',
   templateUrl: './screen7.component.html',
   styleUrls: ['./screen7.component.css']
 })
